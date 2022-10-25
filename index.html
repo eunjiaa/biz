@@ -2,45 +2,65 @@
 <html lang="ko">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V1ETGV011Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1ETGV011Y"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-V1ETGV011Y');
-</script>
+    gtag('config', 'G-V1ETGV011Y');
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="ga, IT관련블로그, 경영정보">
     <meta name="author" content="eunji">
     <title>welcome to eunji's site</title>
+    <script src="https://kit.fontawesome.com/4f1d06bd61.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/mystyle.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body{
+            margin: auto;
+            max-width: 980px;
+        }
+        section{
+            display: flex;
+        }
+        .content{
+            flex: 4;
+        }
+        aside{
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
     <!-- header+nav+selection>article*3+aside^footer -->
-    <header>
-        <img src="./images/logo.jpg" alt="CI">
+    <header id="home"> 
+        <i class="fa-sharp fa-solid fa-bars"></i>
         <h1> eunji's site</h1>
         <header>
         <nav>
             <!--ui>li*4{메인메뉴$$}--> 
-            <ui>
-                <li>소개</li>
-                <li>쇼핑</li>
-                <li>패키지</li>
-                <li>커뮤니티</li>
-            </ui>
+            <ul>
+                <li><a href="./index.html">소개</a></li>
+                <li><a href="./shop/computer.html">쇼핑</a></li>
+                <li><a href="./event/event.html">이벤트</a></li>
+                <li><a href="#">커뮤니티</a></li>
+            </ul>
            
     </nav>
     <section>
+        <div class="content">
         <article>
             <div class="bigdata">
-                <img src="./images/bigdata.jpg" alt="메인이미지" width="50%">
+                <img src="./images/bigdata.jpg"  class="w3-round" alt="메인이미지" width="50%">
             </div>
             <div class="action">
-             <h2> 나의 대위활동 이력 </h2>
-            <table border="1">
+             <h2> 나의 대외활동 이력 </h2>
+            <table class="w3-table-all w3-hoverable"> 
                 <tr>
                     <th>기간</th>
                     <th>대외활동내용</th>
@@ -80,15 +100,32 @@
               <iframe width="70%" height="400" src="./galley.html" frameborder="0"></iframe>  
             </div>
         </article>
-
+    </div>
         <aside> 
             <div class="link">
-                <a href="http://mis.deu.ac.kr">경영정보학과 사이트</a> <br>
+                <a href="http://mis.deu.ac.kr" target="_blank">경영정보학과 사이트</a> <br>
                 <a href="./galley.html">갤러리</a> <br>
-                <a href=""></a>
+                <a href="#home">시작이동</a>
+            </div>
+            <div class="login">
+                <h2> 로그인</h2>
+                <form action="#" method="get">
+                    회원ID <input type="text" class="w3-input" name="id" id=""> <br>
+                    비밀번호 <input type="password" class="w3-input" name="pw" id=""> <br>
+                    남자 <input type="radio" name="gender" value="1" id="">
+                    여자 <input type="radio" name="gender" value="2" id=""> <br>
+                    <input type="submit" class="w3-button w3-blue-grey" value="로그인"> 
+                    <input type="reset" class="w3-button w3-blue-grey" value="재설정"> <br>
+                </form>
             </div>
         </aside>
     </section>
-    <footer> 저작권과 주소</footer>
+    <footer> 저작권과 주소
+        <div class="sns">
+            <a href="http://facebook.com/s">
+            <i class="fa-brands fa-facebook"></i></a>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </footer>
 </body>
 </html>
